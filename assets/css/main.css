@@ -18,7 +18,6 @@ html * {
   background-color: rgba(58, 137, 195, 255);
 }
 
-
 :root {
   scroll-behavior: smooth;
 }
@@ -163,11 +162,11 @@ section {
   font-size: 14px;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: var(--color-secondary-light);
@@ -279,11 +278,9 @@ section {
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
   color: var(--color-white);
-  background: rgba(var(--color-primary-rgb), 0.85);
 }
 
 @media (max-width: 1279px) {
-
   .header .btn-getstarted,
   .header .btn-getstarted:focus {
     margin-right: 50px;
@@ -311,7 +308,7 @@ section {
     position: relative;
   }
 
-  .navbar>ul>li {
+  .navbar > ul > li {
     white-space: nowrap;
   }
 
@@ -337,7 +334,7 @@ section {
     margin-left: 5px;
   }
 
-  .navbar>ul>li>a:before {
+  .navbar > ul > li > a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -352,7 +349,7 @@ section {
   }
 
   .navbar a:hover:before,
-  .navbar li:hover>a:before,
+  .navbar li:hover > a:before,
   .navbar .active:before {
     visibility: visible;
     transform: scaleX(0.7);
@@ -361,12 +358,12 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: var(--color-primary);
   }
 
   .navbar .dropdown a:hover:before,
-  .navbar .dropdown:hover>a:before,
+  .navbar .dropdown:hover > a:before,
   .navbar .dropdown .active:before {
     visibility: hidden;
   }
@@ -374,7 +371,7 @@ section {
   .navbar .dropdown a:hover,
   .navbar .dropdown .active,
   .navbar .dropdown .active:focus,
-  .navbar .dropdown:hover>a {
+  .navbar .dropdown:hover > a {
     color: var(--color-white);
     background: var(--color-secondary);
   }
@@ -412,12 +409,12 @@ section {
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active,
   .navbar .dropdown ul .active:hover,
-  .navbar .dropdown ul li:hover>a {
+  .navbar .dropdown ul li:hover > a {
     color: var(--color-white);
     background: var(--color-primary);
   }
 
-  .navbar .dropdown:hover>ul {
+  .navbar .dropdown:hover > ul {
     opacity: 1;
     visibility: visible;
   }
@@ -437,7 +434,7 @@ section {
   }
 
   .navbar .megamenu ul li a,
-  .navbar .megamenu ul li:hover>a {
+  .navbar .megamenu ul li:hover > a {
     color: rgba(var(--color-white-rgb), 0.5);
     background: none;
   }
@@ -455,7 +452,7 @@ section {
     visibility: hidden;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: 100%;
@@ -468,7 +465,7 @@ section {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
@@ -521,7 +518,7 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: var(--color-white);
   }
 
@@ -535,8 +532,8 @@ section {
     border: 1px solid rgba(var(--color-secondary-light-rgb), 0.3);
   }
 
-  .navbar .dropdown>.dropdown-active,
-  .navbar .dropdown .dropdown>.dropdown-active {
+  .navbar .dropdown > .dropdown-active,
+  .navbar .dropdown .dropdown > .dropdown-active {
     display: block;
   }
 
@@ -642,10 +639,6 @@ section {
   color: var(--color-white);
   background: var(--color-heyoka);
   font-family: var(--font-secondary);
-}
-
-.hero-animated .btn-get-started:hover {
-  background: rgba(var(--color-primary-rgb), 0.8);
 }
 
 .hero-animated .btn-watch-video {
@@ -778,7 +771,6 @@ section {
 }
 
 .hero .btn-get-started:hover {
-  background: var(--color-primary);
   color: var(--color-white);
 }
 
@@ -1005,10 +997,6 @@ section {
   font-family: var(--font-secondary);
 }
 
-.hero-fullscreen .btn-get-started:hover {
-  background: rgba(var(--color-primary-rgb), 0.8);
-}
-
 .hero-fullscreen .btn-watch-video {
   font-size: 16px;
   transition: 0.5s;
@@ -1090,10 +1078,6 @@ section {
   color: var(--color-white);
   background: var(--color-primary);
   font-family: var(--font-secondary);
-}
-
-.hero-static .btn-get-started:hover {
-  background: rgba(var(--color-primary-rgb), 0.8);
 }
 
 .hero-static .btn-watch-video {
@@ -1228,7 +1212,7 @@ section {
   border-bottom: 1px solid rgba(var(--color-secondary-rgb), 0.2);
 }
 
-.about .nav-pills li+li {
+.about .nav-pills li + li {
   margin-left: 40px;
 }
 
@@ -1388,12 +1372,20 @@ section {
 
 .onfocus .video-play {
   min-height: 400px;
-  background: linear-gradient(rgba(var(--color-black-rgb), 0.4), rgba(var(--color-black-rgb), 0.7)), url("../img/onfocus-video-bg.jpg") center center;
+  background: linear-gradient(
+      rgba(var(--color-black-rgb), 0.4),
+      rgba(var(--color-black-rgb), 0.7)
+    ),
+    url("../img/onfocus-video-bg.jpg") center center;
   background-size: cover;
 }
 
 .onfocus .content {
-  background: linear-gradient(rgba(var(--color-secondary-rgb), 0.5), rgba(var(--color-secondary-rgb), 0.8)), url("../img/onfocus-content-bg.jpg") center center;
+  background: linear-gradient(
+      rgba(var(--color-secondary-rgb), 0.5),
+      rgba(var(--color-secondary-rgb), 0.8)
+    ),
+    url("../img/onfocus-content-bg.jpg") center center;
   background-size: cover;
   color: rgba(var(--color-white-rgb), 0.8);
   padding: 40px;
@@ -1464,7 +1456,10 @@ section {
 .onfocus .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(var(--color-primary) 50%, rgba(var(--color-primary-rgb), 0.4) 52%);
+  background: radial-gradient(
+    var(--color-primary) 50%,
+    rgba(var(--color-primary-rgb), 0.4) 52%
+  );
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -1598,7 +1593,11 @@ section {
 
 .features .nav-link.active {
   transition: 0.3s;
-  background: var(--color-secondary) linear-gradient(rgba(var(--color-primary-rgb), 0.95), rgba(var(--color-primary-rgb), 0.6));
+  background: var(--color-secondary)
+    linear-gradient(
+      rgba(var(--color-primary-rgb), 0.95),
+      rgba(var(--color-primary-rgb), 0.6)
+    );
   border-color: var(--color-primary);
 }
 
@@ -1858,7 +1857,11 @@ section {
 }
 
 .pricing .pricing-header {
-  background: linear-gradient(rgba(var(--color-secondary-rgb), 0.9), rgba(var(--color-secondary-rgb), 0.9)), url("../img/pricing-bg.jpg") center center;
+  background: linear-gradient(
+      rgba(var(--color-secondary-rgb), 0.9),
+      rgba(var(--color-secondary-rgb), 0.9)
+    ),
+    url("../img/pricing-bg.jpg") center center;
   background-size: cover;
   text-align: center;
   padding: 40px;
@@ -1946,7 +1949,11 @@ section {
 }
 
 .pricing .featured .pricing-header {
-  background: linear-gradient(rgba(var(--color-primary-rgb), 0.9), rgba(var(--color-primary-rgb), 0.9)), url("../img/pricing-bg.jpg") center center;
+  background: linear-gradient(
+      rgba(var(--color-primary-rgb), 0.9),
+      rgba(var(--color-primary-rgb), 0.9)
+    ),
+    url("../img/pricing-bg.jpg") center center;
 }
 
 .pricing .featured .buy-btn {
@@ -2341,7 +2348,7 @@ section {
   font-size: 15px;
 }
 
-.contact .info-item+.info-item {
+.contact .info-item + .info-item {
   padding-top: 20px;
   margin-top: 20px;
   border-top: 1px solid rgba(var(--color-secondary-rgb), 0.15);
@@ -2387,7 +2394,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -2420,22 +2427,22 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"],
 .contact .php-email-form textarea {
   border-radius: 0px;
   box-shadow: none;
   font-size: 14px;
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form input[type="text"]:focus,
+.contact .php-email-form input[type="email"]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--color-secondary-light);
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email] {
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"] {
   height: 48px;
   padding: 10px 15px;
 }
@@ -2445,7 +2452,7 @@ section {
   height: 290px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: var(--color-primary);
   border: 0;
   padding: 13px 50px;
@@ -2454,7 +2461,7 @@ section {
   border-radius: 0;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: rgba(var(--color-primary-rgb), 0.85);
 }
 
@@ -2494,7 +2501,10 @@ section {
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: var(--color-white);
@@ -2502,7 +2512,10 @@ section {
   border: 1px solid var(--color-primary);
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background-color: var(--color-primary);
 }
 
@@ -2525,7 +2538,7 @@ section {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
 
@@ -2555,7 +2568,7 @@ section {
   height: 100%;
 }
 
-.blog .posts-list article+article {
+.blog .posts-list article + article {
   margin-top: 60px;
 }
 
@@ -2595,7 +2608,7 @@ section {
   margin: 0;
 }
 
-.blog .posts-list .meta-top ul li+li {
+.blog .posts-list .meta-top ul li + li {
   padding-left: 20px;
 }
 
@@ -2706,7 +2719,7 @@ section {
   margin: 0;
 }
 
-.blog .blog-details .meta-top ul li+li {
+.blog .blog-details .meta-top ul li + li {
   padding-left: 20px;
 }
 
@@ -2765,7 +2778,7 @@ section {
   display: inline-block;
 }
 
-.blog .blog-details .meta-bottom .tags li+li::before {
+.blog .blog-details .meta-bottom .tags li + li::before {
   padding-right: 6px;
   color: var(--color-default);
   content: ",";
@@ -2829,7 +2842,7 @@ section {
   color: var(--color-secondary);
 }
 
-.blog .sidebar .sidebar-item+.sidebar-item {
+.blog .sidebar .sidebar-item + .sidebar-item {
   margin-top: 40px;
 }
 
@@ -2840,14 +2853,14 @@ section {
   position: relative;
 }
 
-.blog .sidebar .search-form form input[type=text] {
+.blog .sidebar .search-form form input[type="text"] {
   border: 0;
   padding: 4px;
   border-radius: 4px;
   width: calc(100% - 40px);
 }
 
-.blog .sidebar .search-form form input[type=text]:focus {
+.blog .sidebar .search-form form input[type="text"]:focus {
   outline: none;
 }
 
@@ -2881,7 +2894,7 @@ section {
   padding: 0;
 }
 
-.blog .sidebar .categories ul li+li {
+.blog .sidebar .categories ul li + li {
   padding-top: 10px;
 }
 
@@ -2904,7 +2917,7 @@ section {
   display: flex;
 }
 
-.blog .sidebar .recent-posts .post-item+.post-item {
+.blog .sidebar .recent-posts .post-item + .post-item {
   margin-top: 15px;
 }
 
@@ -3222,17 +3235,21 @@ section {
   border-radius: 4px;
 }
 
-.footer .footer-content .footer-newsletter form input[type=email] {
+.footer .footer-content .footer-newsletter form input[type="email"] {
   border: 0;
   padding: 4px;
   width: calc(100% - 110px);
 }
 
-.footer .footer-content .footer-newsletter form input[type=email]:focus-visible {
+.footer
+  .footer-content
+  .footer-newsletter
+  form
+  input[type="email"]:focus-visible {
   outline: none;
 }
 
-.footer .footer-content .footer-newsletter form input[type=submit] {
+.footer .footer-content .footer-newsletter form input[type="submit"] {
   position: absolute;
   top: 0;
   right: -2px;
@@ -3247,7 +3264,7 @@ section {
   border-radius: 0 4px 4px 0;
 }
 
-.footer .footer-content .footer-newsletter form input[type=submit]:hover {
+.footer .footer-content .footer-newsletter form input[type="submit"]:hover {
   background: rgba(var(--color-primary-rgb), 0.85);
 }
 
