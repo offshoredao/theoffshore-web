@@ -268,7 +268,7 @@ section {
 .header .btn-getstarted:focus {
   font-size: 16px;
   color: var(--color-white);
-  background: var(--color-secondary-light);
+  background: var(--color-heyoka);
   padding: 8px 23px;
   border-radius: 4px;
   transition: 0.3s;
